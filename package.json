@@ -1,0 +1,12 @@
+{
+  "name": "230602-framework-test",
+  "version": "1.0.0",
+  "description": "문서의 동적요청에 대한 사용자경험을 확장하기 위해 Client-side로 front-end를 구성하는 것이 모던 웹 애플리케이션에서의 주요 연구의제이다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
