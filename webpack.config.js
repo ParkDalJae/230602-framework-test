@@ -1,14 +1,14 @@
 // webpack.config.js
 
 const path = require("path");
-const HtmlWebpackPlugin = requrie("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: "./index.tsx",
+    index: "./build/index.tsx",
   }, // 진입점 파일
   output: {
-    path: path.join(__dirname, "bundle"),
+    path: path.join(__dirname, "dist"),
     filename: "[name].bundle.js",
   }, // 번들링 출력 결과물 저장
   module: {
@@ -25,11 +25,11 @@ module.exports = {
     hot: true, // 뜨거워 - 번들링 대상 파일이 수정 될 경우 자동으로 반영하도록 설정
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".tsx", "..."],
   }, // 어떤 유형의 파일들을 해석할 것인지 지정
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html", // index.html을 템플릿으로 번들링 결과 복사본 생성
+      template: "./build/index.html", // index.html을 템플릿으로 번들링 결과 복사본 생성
     }),
   ],
 };
